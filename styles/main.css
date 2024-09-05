@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f2ff;
+  color: #351b50;
+}
+
+nav {
+  padding: 1rem;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+nav ul li {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #351b50;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #f5d14c;
+}
+
+main {
+  padding: 20px;
+}
+
+#content {
+  max-width: 1000px;
+}
+
+#python-container {
+  margin: 50px 50px 50px 10px;
+}
+
+#python-content {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 10px;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+#run-python {
+  height: 55px;
+  background-color: #3a1d6e;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 21px;
+  padding: 5px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#run-python:disabled {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+#run-python:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(#000, 0.2);
+}
+
+.custom-code-block {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.language-python {
+  background-color: #351b50;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #f5d14c;
+  font-size: 16px;
+  width: 100%;
+  text-wrap: wrap;
+}
+
+p > code {
+  background-color: #351b50;
+  color: #f5d14c;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+li > code {
+  background-color: #351b50;
+  color: #f5d14c;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#logo {
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo > img {
+  max-width: 200px;
+  height: auto;
+}
