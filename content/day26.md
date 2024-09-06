@@ -2,6 +2,7 @@
 
 <a href="https://www.youtube.com/watch?v=_IGpC-sA7M4" target="_blank">Dāvida video</a>
 
+
 What is the os library?
 
 It allows us to "talk" to the console. One of the most powerful things we can do with this library is allow it to clear the console.
@@ -121,6 +122,14 @@ while True:
     play()
 ```
 
+###  To `run` code we have to use VS Code terminal not browser.
+
+<img id="image" src="assets/day26-04.png" alt="Replit Workspace Overview" width="960">
+
+
+1. Add new terminal with `+` sign. 
+2. Run in VS Code terminal → project root folder:  `python python_files/day26.py`
+
 Here is an example:
 
 ```python
@@ -195,3 +204,4 @@ while True:
 ```
 
 </details>
+ 
