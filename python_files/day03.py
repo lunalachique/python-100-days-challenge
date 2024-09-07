@@ -1,0 +1,6 @@
+food = input("What is your favorite food? ")
+plant = input("What is your favorite plant?")
+cooking = input("WHat is you way to prepare food?")
+burn = input("What word describe burned food?")
+DIY = input("Name as household item")
+print(cooking, food, " with ", burn, plant, " on a bed of " , DIY)
