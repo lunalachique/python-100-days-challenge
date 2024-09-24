@@ -354,3 +354,8 @@ while True:
 ```
 
 </details>
+
+## !NB 
+
+Please note that this error will show up on pressing number 4.
+<img id="image" src="assets/day34.png" alt="Replit Workspace Overview" width="960">
