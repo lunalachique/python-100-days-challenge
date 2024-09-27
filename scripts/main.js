@@ -2,38 +2,38 @@
 const navigation = document.getElementById("navigation");
 const content = document.getElementById("content");
 
-let pyodide = null;  // Variable to hold the Pyodide instance
-let currentPythonCode = "";  // Variable to store the current Python code to execute
-let runPythonButton = null;  // Reference to the Run button
+let pyodide = null; // Variable to hold the Pyodide instance
+let currentPythonCode = ""; // Variable to store the current Python code to execute
+let runPythonButton = null; // Reference to the Run button
 
 // Function to initialize Pyodide
 async function initializePyodide() {
   if (!pyodide) {
     try {
-      pyodide = await loadPyodide();  // Load Pyodide asynchronously
+      pyodide = await loadPyodide(); // Load Pyodide asynchronously
       console.log("Loaded successfully");
-      runPythonButton.disabled = false;  // Enable the button if Pyodide loads successfully
+      runPythonButton.disabled = false; // Enable the button if Pyodide loads successfully
     } catch (error) {
       console.error("Failed to load Pyodide:", error);
-      runPythonButton.disabled = true;  // Disable the button if Pyodide fails to load
+      runPythonButton.disabled = true; // Disable the button if Pyodide fails to load
     }
   }
 }
 
 // Event listener for DOMContentLoaded to ensure all DOM elements are ready
-document.addEventListener('DOMContentLoaded', async () => {
+document.addEventListener("DOMContentLoaded", async () => {
   // console.log('DOM fully loaded and parsed');
-  
-  runPythonButton = document.getElementById('run-python');  // Get the button element
+
+  runPythonButton = document.getElementById("run-python"); // Get the button element
   // console.log('Run button element:', runPythonButton);
 
   // Set up the button click handler
-  runPythonButton.addEventListener('click', async () => {
+  runPythonButton.addEventListener("click", async () => {
     // console.log("Run button clicked!");
 
     if (!pyodide) {
       console.log("Pyodide is not loaded yet. Attempting to load...");
-      await initializePyodide();  // Attempt to initialize Pyodide if not already loaded
+      await initializePyodide(); // Attempt to initialize Pyodide if not already loaded
     }
 
     if (!pyodide) {
@@ -71,19 +71,24 @@ ${currentPythonCode}
   // Attempt to initialize Pyodide immediately
   await initializePyodide();
 
-  // Initialize navigation menu
+  // Initialize navigation dropdown
+  const select = document.createElement("select");
+  select.id = "dayDropdown";
+  select.className = "day-select";
+
   for (let i = 1; i <= 35; i++) {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = `#day${i}`;
-    a.textContent = `Day ${i}`;
-    a.onclick = (e) => {
-      e.preventDefault();
-      loadContent(i);
-    };
-    li.appendChild(a);
-    navigation.appendChild(li);
+    const option = document.createElement("option");
+    option.value = `day${i}`;
+    option.textContent = `Day ${i}`;
+    select.appendChild(option);
   }
+
+  select.addEventListener("change", function (e) {
+    const selectedDay = e.target.value.replace("day", "");
+    loadContent(parseInt(selectedDay));
+  });
+
+  navigation.appendChild(select);
 
   // Load the first day's content by default
   loadContent(1);
@@ -94,7 +99,9 @@ async function loadContent(day) {
   try {
     // Fetch and display markdown content
     const mdResponse = await fetch(
-      `content/day${day.toString().padStart(2, "0")}.md?cacheBust=${new Date().getTime()}`
+      `content/day${day
+        .toString()
+        .padStart(2, "0")}.md?cacheBust=${new Date().getTime()}`
     );
     if (!mdResponse.ok) throw new Error("Content not found");
     const markdown = await mdResponse.text();
@@ -102,7 +109,9 @@ async function loadContent(day) {
 
     // Fetch Python code to execute with cache-busting parameter
     const pyResponse = await fetch(
-      `python_files/day${day.toString().padStart(2, "0")}.py?cacheBust=${new Date().getTime()}`
+      `python_files/day${day
+        .toString()
+        .padStart(2, "0")}.py?cacheBust=${new Date().getTime()}`
     );
     if (!pyResponse.ok) throw new Error("Python file not found");
     currentPythonCode = await pyResponse.text();
@@ -122,4 +131,3 @@ function customInput(prompt) {
 function customLog(message) {
   console.log(message);
 }
-
