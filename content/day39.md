@@ -1,8 +1,7 @@
-# 👉 Day 39 Challenge
+# 👉 Day 39 Challenge: Hangman
 
 <a href="https://www.youtube.com/watch?v=g2Go3XS3VZg" target="_blank">Dāvida video</a>
 
-## Hangman
 
 This simple game is actually pretty complex. This hangman project combines lists, string manipulation, and slicing, along with other concepts.
 
@@ -69,6 +68,8 @@ You won with 5 lives left.
 # Loses
 You lost!
 ```
+
+### To run this code use terminal and run the file (now you know how it should be done 😎)
 
 
 <details>

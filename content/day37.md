@@ -1,8 +1,7 @@
-# 👉 Day 37 Challenge
+# 👉 Day 37: String Slicing
 
 <a href="https://www.youtube.com/watch?v=0fJNVerQaNI" target="_blank">Dāvida video</a>
 
-## String Slicing
 
 Aren't strings brilliant? Yes, yes they are.
 

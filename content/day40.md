@@ -1,9 +1,7 @@
-# 👉 Day 40 Challenge
+# 👉 Day 40: Dictionaries
 
 <a href="https://www.youtube.com/watch?v=TkKsEq6ODNs" target="_blank">Dāvida video</a>
 
-
-## Dictionaries
 
 As you might have guessed, we love lists. However, list items are accessed in order by index number. This isn't always the way we want it to work.
 

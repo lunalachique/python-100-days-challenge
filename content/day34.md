@@ -1,10 +1,9 @@
-# 👉 Day 34 Challenge
+# 👉 Day 34: Pretty print Functions
 
 <a href="https://www.youtube.com/watch?v=Pg4QMSTTNIw" target="_blank">Dāvida video</a>
 
-## Pretty print Functions
 
-Let's build a pretty `print` subroutine! So far all the subrouintes you have made have been pretty boring...just saying.
+Let's build a pretty `print` subroutine! So far all the subroutines you have made have been pretty boring...just saying.
 
 When we have a list of data, being able to print out that data in pretty ways is something we need to be able to do. So "pretty printing" is actually a thing.
 

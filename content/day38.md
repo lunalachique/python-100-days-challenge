@@ -1,8 +1,7 @@
-# 👉 Day 38 Challenge
+# 👉 Day 38: Strings and Loops
 
 <a href="https://www.youtube.com/watch?v=twzCfSvyte8" target="_blank">Dāvida video</a>
 
-## Strings and Loops
 
 Now that we know that strings are basically lists in disguise, we can start to harness the power of loops with them.
 
@@ -96,6 +95,12 @@ Code the rainbow!
 Example:
 
 <img id="image" src="assets/day38.png" alt="Replit Workspace Overview" width="960">
+
+### To run this code use terminal and run the file
+
+For this challenge colors won't work in the browser console.
+
+To run this code open new Terminal and type python `python_files/day38.py` or `python3 python_files/day38.py` and see the result! 🚀
 
 <details>
 <summary>💡 Hint</summary>

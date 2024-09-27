@@ -1,4 +1,4 @@
-# Day26 - os Library
+# 👉 Day 26: os Library
 
 <a href="https://www.youtube.com/watch?v=_IGpC-sA7M4" target="_blank">Dāvida video</a>
 

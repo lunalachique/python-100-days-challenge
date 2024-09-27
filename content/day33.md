@@ -1,8 +1,6 @@
-# 👉 Day 33 Challenge
+# 👉 Day 33: Dynamic Lists
 
 <a href="https://www.youtube.com/watch?v=O26Y99VRsgQ" target="_blank">Dāvida video</a>
-
-## Dynamic Lists
 
 
 Dynamic lists are ways of using a blank list and adding or removing items to it as we go.

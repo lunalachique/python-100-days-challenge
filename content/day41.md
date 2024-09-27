@@ -1,8 +1,6 @@
-# 👉 Day 41 Challenge
+# 👉 Day 41: Dictionaries With Loops
 
 <a href="https://www.youtube.com/watch?v=MENfSTbAcn8" target="_blank">Dāvida video</a>
-
-## Dictionaries With Loops
 
 
 Loops and lists are a perfect pair. Dictionaries and loops are a bit trickier. This is because each dictionary item is made up of two parts - the name of the key and the actual value of that key.

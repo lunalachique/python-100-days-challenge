@@ -1,9 +1,7 @@
-# 👉 Day 42 Challenge
+# 👉 Day 42: Gotta Catch 'Em All....
 
 <a href="https://www.youtube.com/watch?v=sizWhMe5Tog" target="_blank">Dāvida video</a>
 
-
-## Gotta Catch 'Em All....
 
 ### And Put Them In A Dictionary
 This challenge is all about using dictionaries to create a game about small creatures that you have captured, enslaved, and forced to fight for your amusement. You monster.
@@ -43,6 +41,8 @@ Input your beast's staring MP > 20
 # This text outputs in green
 Your beast is called Brian. It is an earth beast with a special move of Flying bellyflop
 ```
+
+### ➡️ To run this code use terminal and run the file ⬅️
 
 <details>
 <summary>💡 Hint</summary>

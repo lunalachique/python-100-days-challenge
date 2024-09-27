@@ -1,8 +1,7 @@
-# 👉 Day 36 Challenge
+# 👉 Day 36: String Manipulation
 
 <a href="https://www.youtube.com/watch?v=2XBhtE3Pl6M" target="_blank">Dāvida video</a>
 
-## String Manipulation
 
 Let's do some string manipulation to make `if` statements even easier.
 
