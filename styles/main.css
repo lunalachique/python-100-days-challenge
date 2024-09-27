@@ -7,11 +7,15 @@ body {
   color: #351b50;
 }
 
-nav {
-  padding: 1rem;
+nav ul {
+  margin-top: 50px;
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
-nav ul {
+.day-list {
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -19,17 +23,26 @@ nav ul {
   gap: 3px;
 }
 
-nav ul li {
+.day-item {
   margin-right: 10px;
   margin-bottom: 5px;
 }
 
-nav ul li a {
+.day-select {
   text-decoration: none;
   color: #351b50;
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #f5d14c;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.day-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #f5d14c;
 }
 
 main {
@@ -127,6 +140,11 @@ li > code {
   background-color: #351b50;
   padding: 20px;
   border-radius: 5px;
+
+  @media (max-width: 1040px) {
+      max-width: 100%;
+      padding: 10px; 
+  }
 }
 
 a {
