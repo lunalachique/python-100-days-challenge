@@ -138,3 +138,5 @@ while True:
 ```
 
 </details>
+
+Šajā uzdevumā run pogu neizmantojam. 

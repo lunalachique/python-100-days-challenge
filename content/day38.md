@@ -144,3 +144,5 @@ print()
 ```
 
 </details>
+
+Šajā uzdevumā run pogu neizmantojam. 

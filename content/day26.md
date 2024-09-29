@@ -229,3 +229,5 @@ Ja pēc instalācijas joprojām nestrādā `pygame`, tad veicam vēl sekojošas 
 ```
  
 <img id="image" src="assets/day26-07.png" alt="Replit Workspace Overview" width="960">
+
+Šajā uzdevumā run pogu neizmantojam. 

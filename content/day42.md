@@ -87,3 +87,5 @@ for name, value in mokedex.items():
 ```
 
 </details>
+
+Šajā uzdevumā run pogu neizmantojam. 
