@@ -1,4 +1,4 @@
-# 👉 Day 43: 2D Dictionaries
+# 👉 Day 46: 2D Dictionaries
 
 <a href="https://youtu.be/mn1n5db71to?si=B7Cf5qDdprFr71TV" target="_blank">📹 Dāvida video</a>
 
