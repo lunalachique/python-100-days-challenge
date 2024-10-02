@@ -1,4 +1,4 @@
-# 👉 Day 48: Reading From a File
+# 👉 Day 49: Reading From a File
 
 <a href="https://youtu.be/kDQLt3V9WQE?si=DHFkiMXDNMFO8MC8" target="_blank">📹 Dāvida video</a>
 
