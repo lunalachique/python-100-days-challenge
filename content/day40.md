@@ -108,7 +108,6 @@ print(myUser{"name"})
 - The `print` statement uses square brackets. Curly braces `{}` are only used to call the value.
 
 
-
 ```python
 myUser = {"name": "David", "age": 128}
 
