@@ -2,6 +2,8 @@
 
 <a href="https://youtu.be/b2NlupcxRew?si=cw8It_kDlpLym64z" target="_blank">📹 Dāvida video</a>
 
+**To run this days code use terminal and run the file 😎**
+
 
 Our VSCode structure doesn't need to be just one file that contains all of the code and data. We can write data to other files for longer term storage, then access it when we need it.
 
@@ -26,8 +28,6 @@ This is why you had to re-input all of your test data for your dynamic list & di
 To avoid this incredibly annoying data re-entry task, we are going to get the program to save data into a file. 
 
 👉 Here's how to open a file. This one line of code has three important features:
-
-**To run this code use terminal and run the file 😎**
 
 ```python
 import os
