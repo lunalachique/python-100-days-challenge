@@ -22,15 +22,10 @@ async function initializePyodide() {
 
 // Event listener for DOMContentLoaded to ensure all DOM elements are ready
 document.addEventListener("DOMContentLoaded", async () => {
-  // console.log('DOM fully loaded and parsed');
-
   runPythonButton = document.getElementById("run-python"); // Get the button element
-  // console.log('Run button element:', runPythonButton);
 
   // Set up the button click handler
   runPythonButton.addEventListener("click", async () => {
-    // console.log("Run button clicked!");
-
     if (!pyodide) {
       console.log("Pyodide is not loaded yet. Attempting to load...");
       await initializePyodide(); // Attempt to initialize Pyodide if not already loaded
@@ -79,24 +74,37 @@ ${currentPythonCode}
   for (let i = 1; i <= 50; i++) {
     const option = document.createElement("option");
     option.value = `day${i}`;
-    option.textContent = `Day ${i}`;
+    option.textContent = `${i}.diena`;
     select.appendChild(option);
   }
 
   select.addEventListener("change", function (e) {
     const selectedDay = e.target.value.replace("day", "");
     loadContent(parseInt(selectedDay));
+
+    // Update the URL with the selected day
+    const newUrl = new URL(window.location);
+    newUrl.searchParams.set("day", selectedDay);
+    window.history.pushState({}, "", newUrl);
   });
 
   navigation.appendChild(select);
 
-  // Load the first day's content by default
-  loadContent(1);
+  // Check if there's a day parameter in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const dayParam = urlParams.get("day");
+
+  // Load the content based on the URL parameter or default to day 1
+  loadContent(dayParam ? parseInt(dayParam) : 1);
 });
 
 // Function to load content based on the day selected
 async function loadContent(day) {
   try {
+    // Update the dropdown to match the current day
+    const dropdown = document.getElementById("dayDropdown");
+    dropdown.value = `day${day}`;
+
     // Fetch and display markdown content
     const mdResponse = await fetch(
       `content/day${day
