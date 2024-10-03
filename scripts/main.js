@@ -98,6 +98,39 @@ ${currentPythonCode}
   loadContent(dayParam ? parseInt(dayParam) : 1);
 });
 
+// Function to create copyable code blocks
+function createCopyableCodeBlocks() {
+  console.log("Creating copyable code blocks");
+  const codeBlocks = document.querySelectorAll("pre code");
+  console.log(`Found ${codeBlocks.length} code blocks`);
+  codeBlocks.forEach((block, index) => {
+    console.log(`Processing code block ${index + 1}`);
+    const wrapper = document.createElement("div");
+    wrapper.className = "code-block";
+    block.parentNode.insertBefore(wrapper, block);
+    wrapper.appendChild(block);
+
+    const copyButton = document.createElement("button");
+    copyButton.className = "copy-button";
+    copyButton.textContent = "Copy";
+    wrapper.appendChild(copyButton);
+
+    copyButton.addEventListener("click", function () {
+      navigator.clipboard
+        .writeText(block.textContent)
+        .then(() => {
+          this.textContent = "Copied!";
+          setTimeout(() => {
+            this.textContent = "Copy";
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error("Failed to copy text: ", err);
+        });
+    });
+  });
+}
+
 // Function to load content based on the day selected
 async function loadContent(day) {
   try {
@@ -114,6 +147,7 @@ async function loadContent(day) {
     if (!mdResponse.ok) throw new Error("Content not found");
     const markdown = await mdResponse.text();
     content.innerHTML = marked(markdown);
+    createCopyableCodeBlocks(); // Add this line to create copyable code blocks
 
     // Fetch Python code to execute with cache-busting parameter
     const pyResponse = await fetch(
