@@ -47,7 +47,7 @@ nav ul {
   color: #351b50;
   padding: 5px 10px;
   border-radius: 5px;
-  background-color: #f5d14c;
+  background-color: #F5D14C;
   border: 4px solid rgba(53, 27, 80, 0.1);
   font-family: inherit;
   font-size: inherit;
@@ -182,4 +182,32 @@ details {
   text-align: center;
   width: 100%;
   max-width: 1100px;
+}
+
+.code-block {
+  position: relative;
+  background-color: #351b50;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+.code-block pre {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.copy-button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #F5D14C;
+  color: #351b50;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+.copy-button:hover {
+  background-color: #F5D14C;
 }
