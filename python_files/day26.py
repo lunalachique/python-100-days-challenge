@@ -1,7 +1,7 @@
 print("Music player")
 print()
 
-import os, time, pygame
+import os, time 
 
 pygame.init()
 pygame.mixer.init()
