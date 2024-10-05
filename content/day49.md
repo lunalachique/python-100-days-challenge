@@ -13,6 +13,7 @@ Yes. Yes is the answer you're looking for.
 ### Open
 
 👉 The code to load from a file is pretty similar to that for writing. The command is `open` instead of `read`, and the permissions are slightly different.
+**Remember to create file first! Look at the day 48 example!**
 
 ```python
 f = open("filenames.list", "r")
