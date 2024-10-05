@@ -3,11 +3,11 @@ print()
 
 import os, time 
 
-pygame.init()
-pygame.mixer.init()
-sound = pygame.mixer.Sound('assets/audio.wav')
+#pygame.init()
+##pygame.mixer.init()
+#sound = pygame.mixer.Sound('assets/audio.wav')
 sound.play()
-pygame.mixer.pause()
+#pygame.mixer.pause()
 
 def pause():
   pygame.mixer.pause()
@@ -16,7 +16,7 @@ pause()
 
 def play():
   # Play the soundSylv
-  pygame.mixer.unpause()
+  #pygame.mixer.unpause()
   while True:
     stop_playback = int(
         input("Press 2 anytime to pause playback and go back to the menu: "))
