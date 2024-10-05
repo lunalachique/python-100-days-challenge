@@ -15,7 +15,7 @@ def pause():
 pause()
 
 def play():
-  # Play the sound
+  # Play the soundSylv
   pygame.mixer.unpause()
   while True:
     stop_playback = int(
